@@ -126,7 +126,7 @@ const SolitaireGame = () => {
         <div className="game-area">
           <div className="deck-area">
             <Deck drawCard={drawCard} remainingCards={stock.length} />
-            <WastePile key={`${forceRender}`} wasteCards={waste} />
+            <WastePile key={`${waste.map(card => card.id).join(",")}-${forceRender}`} cards={waste} />
           </div>
           <div className="foundation-container">
             {foundation.map((pile, index) => (
