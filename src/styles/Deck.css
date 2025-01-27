@@ -1,0 +1,30 @@
+.deck-container {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.deck-back {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    darkblue,
+    darkblue 10px,
+    navy 10px,
+    navy 20px
+  );
+  border-radius: 8px;
+}
+
+.empty-deck {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}

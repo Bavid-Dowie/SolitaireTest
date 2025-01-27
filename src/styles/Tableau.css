@@ -1,0 +1,22 @@
+.tableau-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tableau-column {
+  width: 80px;
+  min-height: 150px;
+  position: relative;
+}
+
+.tableau-card {
+  position: absolute;
+  width: 100%;
+}
+
+.empty-tableau {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+.solitaire-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-area {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.foundation-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust spacing between foundation piles */
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import SolitaireGame from "./components/SolitaireGame";
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
+    <div className="App">
       <SolitaireGame />
     </div>
   );
-};
+}
 
 export default App;
