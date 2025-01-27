@@ -47,7 +47,7 @@ const SolitaireGame = () => {
     }
 
     const numCardsToDraw = Math.min(drawMode, stock.length); // Draw up to `drawMode` cards
-    const drawnCards = stock.slice(0, numCardsToDraw); // Get the top `numCardsToDraw` cards
+    const drawnCards = stock.slice(0, numCardsToDraw).map(card => ({ ...card, faceUp: true })); // ✅ Ensure face-up
 
     console.log(`Drawing ${numCardsToDraw} card(s):`, drawnCards);
 
@@ -64,6 +64,7 @@ const SolitaireGame = () => {
     console.log("Updated Waste:", [...waste, ...drawnCards]); // Confirm waste updates
     console.log("Updated Stock:", [...stock.slice(numCardsToDraw)]); // Confirm stock updates
   };
+
 
   console.log("Updated waste pile state:", waste);
 
@@ -126,7 +127,11 @@ const SolitaireGame = () => {
         <div className="game-area">
           <div className="deck-area">
             <Deck drawCard={drawCard} remainingCards={stock.length} />
-            <WastePile key={`${waste.map(card => card.id).join(",")}-${forceRender}`} cards={waste} />
+            <WastePile
+              key={`${waste.map(card => card.id).join(",")}-${forceRender}`}
+              cards={waste}
+              drawMode={drawMode}
+            />
           </div>
           <div className="foundation-container">
             {foundation.map((pile, index) => (
